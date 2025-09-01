@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Account Creation - FMS</title>
+  <link rel="stylesheet" href="style.css">
+  
+  <style>
+    body {
+        background: none; 
+        color: #2c3e50;
+        line-height: 1.6;
+        font-size: 16px;
+        overflow-x: hidden;
+        display: flex;
+        flex-direction: column;
+        height: 100vh; 
+    }
+
+    .card {
+        background: rgba(255, 255, 255, 0.9); 
+        color: #2c3e50;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+        margin-bottom: 20px;
+    }
+
+    .button-container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+        margin-top: 20px;
+    }
+
+    button {
+        background: #2e7d32;
+        color: #fff;
+        border: none;
+        padding: 12px 25px;
+        margin: 15px;
+        border-radius: 25px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: bold;
+        transition: background 0.3s ease, transform 0.3s ease;
+    }
+
+    button:hover {
+        background: #1b5e20;
+        transform: scale(1.1);
+    }
+
+    .menu-card { display: none; }
+
+    .back-to-login {
+      background: #d32f2f; 
+      color: white;
+      border-radius: 25px;
+      padding: 12px 25px;
+      text-decoration: none;
+      text-align: center;
+      display: inline-block;
+      font-weight: bold;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .back-to-login:hover {
+      background: #c62828;
+      transform: scale(1.1); 
+    }
+
+    .back-buttons-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px; 
+      margin-top: 20px; 
+    }
+
+    footer {
+        margin-top: auto;
+        padding: 18px 0;
+        background: #2e7d32;
+        color: #fff;
+        text-align: center;
+        border-radius: 15px 15px 0 0;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <h1>Create an Account</h1>
+    <p>Select the type of account you want to create.</p>
+  </header>
+
+  <main class="dashboard">
+    <section id="account-selection">
+      <div class="card">
+        <h2>Select Account Type</h2>
+        <div class="button-container">
+          <button class="btn-success" onclick="location.href='farmer_registration.php'">Create Farmer Account</button>
+          <button class="btn-info" onclick="location.href='wholesaler_registration.php'">Create Wholesaler Account</button>
+          <button class="btn-warning" onclick="location.href='supplier_registration.php'">Create Supplier Account</button>
+        </div>
+      </div>
+      <div class="back-buttons-container">
+        <a href="login.php" class="back-to-login">Back to Login</a>
+        <a href="index.php" class="back-to-login">Back to Home</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Farmers Management System</p>
+  </footer>
+</body>
+</html>
